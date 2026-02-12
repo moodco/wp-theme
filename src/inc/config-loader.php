@@ -145,6 +145,9 @@ add_action('wp_head', 'moodco_inject_favicons', 2);
  * Inject Open Graph meta tags from config.
  */
 function moodco_inject_og_tags() {
+    // Don't output if Yoast SEO is handling OG tags
+    if (defined('WPSEO_VERSION')) return;
+
     $site_name = moodco_config('name', get_bloginfo('name'));
     $description = moodco_config('description', get_bloginfo('description'));
     $og_image = moodco_config('meta.og_image');
