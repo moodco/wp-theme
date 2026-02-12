@@ -70,6 +70,14 @@ if ( have_posts() ) :
                 <div class="col-xxl-9 col-lg-8">
                     <div class="th-blog blog-single">
                         <h2 class="blog-title"><?php the_title();?></h2>
+                        <div class="blog-meta">
+							<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>">
+								<i class="far fa-user"></i> By <?php the_author(); ?>
+							</a>
+							<a href="<?php the_permalink(); ?>">
+								<i class="fal fa-calendar-days"></i><?php echo get_the_date(); ?>
+							</a>
+						</div>
                         <div class="blog-img">
                             <?php if ( has_post_thumbnail() ) : ?>
 								<img 
