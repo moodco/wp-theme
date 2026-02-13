@@ -169,9 +169,8 @@ a svg {
 
 /* Hide desktop sidebar toggle + mobile menu button */
 @media (min-width: 992px) {
-  .sideMenuToggler,
   .th-menu-toggle {
-    display: none !important;
+      display: none !important;
   }
 }
 
@@ -431,7 +430,7 @@ a svg {
 }
 /* arrow slider  */
 .hero-slider__dot.active {
-  background: #fff;
+  background: var(--theme-color);
 }
 
 .hero-slider__prev,
@@ -459,4 +458,99 @@ a svg {
   width: 20px;
   height: 20px;
   fill: #fff;
+}
+.th-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff !important;
+  color: #000 !important;
+  width: 30px !important;
+    height: 30px !important;
+}
+.th-social a svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+.th-social a:hover {
+  background-color: var(--theme-color) !important;
+  color: #fff !important;
+}
+.hero-slider__meta,
+.section-card__meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.85rem;
+  cursor: default;
+}
+
+.section-card--large .section-card__meta {
+  color: #ffffff;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.section-card--small .section-card__meta {
+  color: #666;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: inherit;
+}
+
+.meta-icon svg {
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
+  display: block;
+}
+
+.author-link-trigger,
+.author-link-real {
+  cursor: pointer !important;
+  transition: color 0.2s ease;
+  pointer-events: auto;
+}
+
+.author-link-trigger:hover,
+.author-link-real:hover {
+  color: var(--theme-color) !important;
+}
+
+.section-card__meta .meta-item:not(.author-link-trigger):not(.author-link-real),
+.meta-divider {
+  cursor: default !important;
+  pointer-events: none;
+}
+
+.meta-divider {
+  display: inline-block;
+  color: inherit;
+  opacity: 0.8;
+  margin: 0 2px;
+}
+
+.section-card__title a {
+  text-decoration: none;
+  color: inherit;
+}
+.footer-links {
+  text-align: center;
+}
+.footer-links li {
+  margin-right: 10px;
+  font-size: 14px;
+}
+.footer-wrapper .br-1 {
+  border-top: 1px solid #464646 !important;
+  padding: 20px 0 !important;
 }

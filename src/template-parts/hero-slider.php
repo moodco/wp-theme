@@ -43,9 +43,17 @@ $posts_array = $hero_posts->posts;
                             <?php endif; ?>
                             <h2 class="hero-slider__title"><?php echo esc_html($post->post_title); ?></h2>
                             <div class="hero-slider__meta">
-                                <span><?php echo get_the_author_meta('display_name', $post->post_author); ?></span>
-                                <span>&middot;</span>
-                                <span><?php echo moodco_time_ago($post->ID); ?></span>
+                                <span class="meta-item author-link-trigger" data-author-url="<?php echo get_author_posts_url($post->post_author); ?>">
+                                    <?php echo moodco_svg_icon('users', 'meta-icon'); ?>
+                                    <?php echo get_the_author_meta('display_name', $post->post_author); ?>
+                                </span>
+                                
+                                <span class="meta-divider">&middot;</span>
+                                
+                                <span class="meta-item">
+                                    <?php echo moodco_svg_icon('calendar', 'meta-icon'); ?>
+                                    <?php echo moodco_time_ago($post->ID); ?>
+                                </span>
                             </div>
                         </div>
                     </a>

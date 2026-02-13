@@ -89,7 +89,7 @@ if ( have_posts() ) :
 							<div class="auhtor-img">
 								<?php
 								$author_id = get_the_author_meta('ID');
-								$author_image_id = get_field('autor_profile', 'user_' . $author_id);
+								$author_image_id = get_field('author_profile', 'user_' . $author_id);
 
 								if ($author_image_id) {
 									echo wp_get_attachment_image($author_image_id, 'thumbnail');

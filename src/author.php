@@ -138,13 +138,12 @@
 
 								$author_image_id = get_field('autor_profile', 'user_' . $author_id);
 
-								$company_image = get_template_directory_uri() . '/assets/images/team-logo.png';
+								$company_image = moodco_get_logo('square');
 
 								if ($author_image_id) {
 									echo wp_get_attachment_image($author_image_id, 'thumbnail');
 								} else {
-									echo '<img src="' . esc_url($company_image) . '" alt="<?php echo esc_attr(moodco_config('name', get_bloginfo('name'))); ?>" />';
-								}
+									echo '<img src="' . esc_url($company_image) . '" alt="' . esc_attr(moodco_config('name', get_bloginfo('name'))) . '" />';								}
 								?>
 							</div>
 
@@ -186,7 +185,11 @@
 
                                     <?php if ($twitter = get_field('author_x', 'user_' . $user_id)): ?>
                                     <a href="<?php echo esc_url($twitter); ?>" target="_blank">
+<<<<<<< Updated upstream
                                         <i class="fa-brands fa-x-twitter"></i>
+=======
+                                        <i class="fab fa-twitter"></i>
+>>>>>>> Stashed changes
                                     </a>
                                     <?php endif; ?>
 

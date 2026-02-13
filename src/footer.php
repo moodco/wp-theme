@@ -23,10 +23,23 @@ $social_media = function_exists('have_rows') && have_rows('social_media', 'optio
                             </div>
                             <p class="about-text"><?php echo esc_html($footer_desc); ?></p>
                             <div class="th-social style-black">
-                                <?php if ($social_media): while (have_rows('social_media', 'options')): the_row(); ?>
-                                    <a href="<?php the_sub_field('social_media_link'); ?>" target="_blank"><?php the_sub_field('social_media_icon'); ?></a>
-                                <?php endwhile; endif; ?>
-                            </div>
+                                <?php 
+                                $socials = moodco_config('social_media', []);
+
+                                if (!empty($socials) && is_array($socials)) :
+                                    foreach ($socials as $icon => $url) :
+                                        if (!empty($url)) :
+                                ?>
+                                            <a href="<?php echo esc_url($url); ?>" target="_blank" rel="noopener">
+                                                <?php echo moodco_svg_icon($icon); ?>
+                                            </a>
+                                <?php
+                                        endif;
+                                    endforeach;
+                                endif;
+                                ?>
+                                </div>
+
                         </div>
                     </div>
                 </div>
@@ -95,7 +108,8 @@ $social_media = function_exists('have_rows') && have_rows('social_media', 'optio
                     </div>
                 </div>
             </div>
-            <div class="clearfix" style="height:20px;"></div>
+            <!-- <div class="clearfix" style="height:20px;"></div> -->
+            <div class="clearfix"></div>
             <div class="row justify-content-between align-items-center br-1">
                 <div class="col-lg-12">
                     <p class="copyright-text text-center">

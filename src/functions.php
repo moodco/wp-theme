@@ -55,7 +55,7 @@ function moodco_time_ago($post_id = null) {
     if ($diff < 86400) return floor($diff / 3600) . ' hours ago';
     if ($diff < 604800) return floor($diff / 86400) . ' days ago';
     
-    return get_the_date('M d, Y', $post_id);
+    return get_the_date('d/m/Y', $post_id);
 }
 
 

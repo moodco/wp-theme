@@ -16,7 +16,10 @@
     "header_top": "#cccccc",
     "menu_bg": "#000000"
   },
-
+  "social_media": {
+    "twitter": "https://x.com/Arsenal",
+    "facebook": "https://www.facebook.com/Arsenal"
+  },
   "fonts": {
     "title": { "family": "League Spartan", "fallback": "sans-serif" },
     "body": { "family": "Poppins", "fallback": "sans-serif" }
@@ -38,7 +41,8 @@
     "favicon_16": "assets/logos/readarsenal/favicon-16.png",
     "apple_touch_icon": "assets/logos/readarsenal/apple-touch-icon.png",
     "android_192": "assets/logos/readarsenal/android-chrome-192.png",
-    "android_512": "assets/logos/readarsenal/android-chrome-512.png"
+    "android_512": "assets/logos/readarsenal/android-chrome-512.png",
+    "square" :"assets/logos/readarsenal/square.png"
   },
 
   "analytics": {

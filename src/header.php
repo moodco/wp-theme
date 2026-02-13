@@ -131,7 +131,9 @@ $news_bar_items = moodco_config('news_bar', ["This is demo breaking news","This 
                                     <?php if (moodco_config('features.contact_form', true)): ?>
                                         <a href="<?php echo esc_url(home_url('/contact-us')); ?>" class="th-btn style3">Contact Us</a>
                                     <?php endif; ?>
-                                    <button type="button" class="th-menu-toggle d-block d-lg-none"><?php echo moodco_svg_icon('menu'); ?></button>
+                                    <button type="button" class="th-menu-toggle d-lg-none">
+    <?php echo moodco_svg_icon('menu'); ?>
+</button>
                                 </div>
                             </div>
                         </div>

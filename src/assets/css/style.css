@@ -113,7 +113,7 @@ Version: 1.0.0
   --border-color: #EFEFEF;
 
   /* Typography & Layout */
-  --icon-font: "Font Awesome 6 Pro";
+  --icon-font: "Font Awesome 6 Pro" , "Font Awesome 5 Free";
   --main-container: 1224px;
   --container-gutters: 24px;
   --section-space: 60px;
@@ -1224,6 +1224,7 @@ textarea.is-invalid {
 .th-mobile-menu ul li>a:before {
   content: '\f105';
   font-family: var(--icon-font);
+  font-weight: 900;
   position: absolute;
   left: 0;
   top: 12px;
@@ -5584,7 +5585,7 @@ ol.wp-block-rss {
 .copyright-wrap {
   padding: 28px 0;
   background-size: 100% auto;
-  border-top: 1px solid var(--border-color);
+  /* border-top: 1px solid var(--border-color); */
   /* Large devices */
 }
 
@@ -8338,7 +8339,7 @@ table #woosq-popup .product_meta {
     min-width: auto;
   }
 
-  .summary-content,
+  /* .summary-content, */
 
 }
 
@@ -8385,7 +8386,7 @@ table #woosq-popup .product_meta {
     margin: 0 auto;
   }
 
-  .th-sort-bar
+  /* .th-sort-bar */
 }
 
 /* Extra small devices */
@@ -8602,7 +8603,7 @@ table #woosq-popup .product_meta {
     text-align: center;
   }
 
-  .cart_table
+  /* .cart_table */
 }
 
 /* Small devices */
@@ -8742,7 +8743,7 @@ span.select2-selection.select2-selection--single:focus {
   color: var(--theme-color);
 }
 
-.th-checkout-wrapper form
+/* .th-checkout-wrapper form */
 /* Small devices */
 @media (max-width: 767px) {
   tfoot.checkout-ordertable th {

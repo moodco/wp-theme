@@ -11,7 +11,7 @@ function moodco_enqueue_assets() {
     wp_enqueue_style('bootstrap', $theme_uri . '/assets/css/bootstrap.min.css', [], '5.0');
     wp_enqueue_style('davesport-main', $theme_uri . '/assets/css/style.css', ['bootstrap'], $ver);
     wp_enqueue_style('davesport-custom', $theme_uri . '/assets/css/custom.css', ['davesport-main'], $ver);
-
+    
     // Google Fonts
     $fonts = moodco_config('fonts', []);
     $families = [];
