@@ -23,7 +23,7 @@
     "header_bg": "#cccccc",
     "header_top": "#cccccc",
     "menu_bg": "#cccccc",
-    "menu_link": "#ffffff"
+    "menu_link": "#000000"
   },
   "fonts": {
     "title": {
