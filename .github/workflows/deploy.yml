@@ -103,17 +103,17 @@ jobs:
   #         key: ${{ secrets.DEPLOY_SSH_KEY }}
   #         script: bash ~/deploy.sh
 
-  # deploy-arsenal:
-  #   name: Deploy to Arsenal
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Deploy via SSH
-  #       uses: appleboy/ssh-action@v1.0.3
-  #       with:
-  #         host: ssh.gb.stackcp.com
-  #         username: readarsenal.com
-  #         key: ${{ secrets.DEPLOY_SSH_KEY }}
-  #         script: bash ~/deploy.sh
+  deploy-arsenal:
+    name: Deploy to Arsenal
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ssh.gb.stackcp.com
+          username: readarsenal.com
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          script: bash ~/deploy.sh
 
   # deploy-westham:
   #   name: Deploy to West Ham
